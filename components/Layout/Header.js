@@ -22,9 +22,10 @@ const useStyles = makeStyles((theme) => ({
   title: {
     [theme.breakpoints.down("xs")]: {
       flexGrow: 1,
+      color: "#fbc531",
     },
     [theme.breakpoints.up("sm")]: {
-      backgroundColor: "#81ecec",
+      backgroundColor: "#fbc531",
       color: "#2d3436",
       padding: 5,
       borderRadius: "5px",
@@ -100,26 +101,26 @@ export default function MenuAppBar() {
             </>
           ) : (
             <div className={classes.headerStyles}>
-              <IconButton
-                // edge="start"
-                className={classes.menuButton}
-                color="inherit"
-                aria-label="menu"
-              >
-                <Link href="/">
+              <Link href="/">
+                <IconButton
+                  // edge="start"
+                  className={classes.menuButton}
+                  color="inherit"
+                  aria-label="menu"
+                >
                   <a>Home</a>
-                </Link>
-              </IconButton>
-              <IconButton
-                edge="start"
-                className={classes.menuButton}
-                color="inherit"
-                aria-label="menu"
-              >
-                <Link href="about/">
+                </IconButton>
+              </Link>
+              <Link href="about/">
+                <IconButton
+                  // edge="start"
+                  className={classes.menuButton}
+                  color="inherit"
+                  aria-label="menu"
+                >
                   <a>About</a>
-                </Link>
-              </IconButton>
+                </IconButton>
+              </Link>
             </div>
           )}
         </Toolbar>

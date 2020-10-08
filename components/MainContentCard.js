@@ -3,39 +3,43 @@ import { makeStyles } from "@material-ui/core/styles";
 import {
   Card,
   CardActionArea,
-  CardMedia,
   CardContent,
   Typography,
 } from "@material-ui/core";
 
-
 const useStyles = makeStyles({
-  media: {
+  imgStyles: {
+    width: "100%",
+    padding: 5,
     minHeight: 240,
+  },
+  cardStyles: {
+    marginTop: "2rem",
   },
 });
 
-export default function MediaCard() {
+function MediaCard(props) {
   const classes = useStyles();
 
   return (
-    <Card>
+    <Card className={classes.cardStyles}>
       <CardActionArea>
-        <CardMedia
-          className={classes.media}
-          image="https://via.placeholder.com/800x400"
-          title="Contemplative Reptile"
+        <img
+          className={classes.imgStyles}
+          src={props.comic.img}
+          alt={props.comic.safe_title}
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            Lizard
+            {props.comic.title}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
+            {props.comic.alt}
           </Typography>
         </CardContent>
       </CardActionArea>
     </Card>
   );
 }
+
+export default MediaCard;

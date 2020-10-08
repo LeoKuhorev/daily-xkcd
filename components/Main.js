@@ -1,22 +1,13 @@
 import React from "react";
+import { Container } from "@material-ui/core";
 import Links from "./Links";
 import MainContentCard from "./MainContentCard";
-import { Container, Typography, Paper } from "@material-ui/core";
-import { makeStyles } from "@material-ui/styles";
 
-const useStyles = makeStyles(() => ({
-  containerStyles: {
-    minHeight: "100vh",
-  },
-}));
-
-export default function Main() {
-  const classes = useStyles();
-
+export default function Main(props) {
   return (
     <Container maxWidth="sm">
-      <MainContentCard />
-      <Links />
+      <MainContentCard comic={props.comic} />
+      <Links num={props.comic.num} />
     </Container>
   );
 }
