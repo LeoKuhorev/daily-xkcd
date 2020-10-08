@@ -93,7 +93,7 @@ export default function MenuAppBar() {
                   </Link>
                 </MenuItem>
                 <MenuItem onClick={handleClose}>
-                  <Link href="about/">
+                  <Link href="/about/">
                     <a>About</a>
                   </Link>
                 </MenuItem>
@@ -111,7 +111,7 @@ export default function MenuAppBar() {
                   <a>Home</a>
                 </IconButton>
               </Link>
-              <Link href="about/">
+              <Link href="/about/">
                 <IconButton
                   // edge="start"
                   className={classes.menuButton}
